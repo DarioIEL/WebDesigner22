@@ -1,0 +1,24 @@
+- Crea uno script (in un file esterno);
+- Crea le seguenti variabili e valorizza con i tuoi dati
+        -nome
+        -cognome
+        -età
+        -città
+        -materia preferita
+- Calcola la tua età tra 5 anni e stampa (in console) il seguente messaggio: tra 5 anni avrò ... anni
+
+- Stampa nella pagina html le tue info nel seguente modo
+
+Nome: Dario
+Cognome: Mennillo
+.
+.
+.
+
+Consiglio : utilizza dei paragrafi per ogni dato; utilizza un document.write() per ogni paragrafo
+
+document.write("<p> NOme:" + nome + "</p>");
+.
+.
+.
+.

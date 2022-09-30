@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Nella head vanno inseriti i tag tecnici -->
+    <meta charset="utf-8">
+
+    <!-- title utilizzato come tag va solo nella head, quindi rientra tra i tag "tecnici -->
+    <title>Pagina semantica del testo</title>
+
+
+</head>
+
+<body>
+    <h1>Semantica del testo</h1>
+    <p>Tag per i testi</p>
+
+    <b>Testo in grassetto</b>
+    <br>
+    <strong>Testo importante</strong>
+    <br>
+    <i>Testo in corsivo</i>
+    <br>
+    <em>Testo enfatizzato</em>
+    <br>
+    <small>testo piccolo</small>
+    <br>
+    <mark>testo contrassegnato</mark>
+    <br>
+    <del>testo eliminato</del>
+    <br>
+    <ins>testo inserito</ins>
+    <sup>Apice</sup>
+    <sub>Pedice</sub>
+    <br>
+    <p><cite>L'urlo</cite> di Edvard Munch</p>
+
+    <br>
+
+    <!-- title viene utilizzato come attributo, quindi viene inserito nel markup di apertura di un qualsiasi tag -->
+    <p>Visitate il sito dell' <abbr title="Istituto Nazionale Previdenza Sociale">INPS</abbr></p>
+
+    <br>
+    <!-- kdb è l'input utente -->
+    <p>Per commentare in HTML digita <kbd>Ctrl + ù </kbd></p>
+
+    <!-- samp per definire l'output di un programma -->
+    <p>Dopo aver acccettato, il software vi avviserà in questo modo : <samp>Operazione completata con successo</samp>
+    </p>
+
+    <!-- code per definire una porzione di codice -->
+    <p>Posso utilizzare l'attributo <code>style="color: red"</code> per cambiare colore al testo</p>
+
+    <!-- var per definire una variabile, da non confondere con var di JavaScript -->
+    <p>L'area di un triangolo è data da <var>(base</var> * <var>altezza)</var> / <var>2</var> </p>
+
+
+    <hr>
+
+    <h2>Bootstrap</h2>
+    <p title="titolo del paragrafo ">
+        Bootstrap è una libreria basata su ......
+    </p>
+
+    <!-- title utilizzato come tag nel body non ha alcun significato, non verrà mai renderizzato -->
+    <!-- <title></title> -->
+
+    <!-- Le immagini vanno salvate con titoli parlanti, preferibilmente in camelCase oppure con _ a dividere le parole -->
+
+    <!-- IMMAGINI -->
+    <!-- con path relativo, da utilizzare quando l'immagine si trova nella nostra cartella progetto -->
+    <!-- con auto lasciate il compito al browser di impostare l'altezza o la larghezza rispettando le proporzioni. Le misure che inseriamo sono in pixel -->
+    <img src="img/copertinaAliceNelPaeseDelleMeraviglie.jpg" width="200px" height="auto"
+        title="copertina libro Alice nel paese delle meraviglie - Lewis Carrol"
+        alt="copertina del libro Alice nel Paese delle Meraviglie di Lewis Carrol edito da Feltrinelli">
+
+    <hr>
+
+    <!-- path assoluto, da utilizzare quando l'immagine è all'esterno ma neanche nel nostro pc-->
+
+    <a href="https://www.amazon.it/Chisciotte-della-Mancia-Miguel-Cervantes/dp/881701463X"
+    target="_blank">
+
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81QWz7WgrfL.jpg"
+            alt="copertina del libro Don Chisciotte della Mancia di Cervantes edito BUR" width="200" height="auto"
+            title="Don Chisciotte della Mancia - Cervantes">
+
+
+    </a>
+
+    
+
+
+</body>
+
+</html>

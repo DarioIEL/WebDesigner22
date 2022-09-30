@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primo Esempio JS</title>
+</head>
+<body>
+    <h1>Come collegare un file JS allo HTML</h1>
+    <p>Il tag script dovrà essere aperto sempre prima della chiusura del tag body</p>
+
+
+
+
+    <!-- Collegamento file esterno JS -->
+    <script src="./js/script01.js"></script>
+
+    <script>
+        // Posso scrivere in JS anche qui in linea nel mio tag script
+        var giorno = "Venerdì";
+        console.log("Oggi è: " + giorno);
+
+        console.log("Il mio nome è:" + nome); //sto richiamando la var nome dichiarata nel file script01.js
+    </script>
+
+
+
+</body>
+</html>

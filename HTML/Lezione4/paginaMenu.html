@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina dei menu</title>
+    
+    <!-- Il tag style va aperto dentro la head -->
+
+    <style>
+        /*Siamo nel CSS - Cascade Style Sheet - In questo tag è possibile fornire delle regole di stile */
+
+        /* Forniremo delle regole attraverso l'utilizzo degli ID */
+
+        /* Prendo l' id="menu". In questo modo tutte le regole che darò all'id menu si applicheranno al tag ul e a tutti i suoi figli, quindi a tutti gli li e tutti gli a contenuti nell' ul */
+
+        #menu{
+            /* Questa regola, color, fornisce colore solo ai testi */
+            display: block;
+           
+            list-style: none;
+           
+            background-color: blueviolet;
+            width: auto;
+            height: 50px;
+        }
+
+        /* richiamando direttamente il tag applico le mie regole a tutti i tag li della pagina */
+        li{
+            /* con la regola float faccio spostare tutti gli elementi verso sinistra */
+            float: left;
+            /* display: block creo un "blocchetto" intorno alle parole */
+            display: block;
+            /* margin, distanzio, creo uno spazio su tutti i lati del blocchetto */
+            margin: 5px 10px 5px 10px;
+        }
+
+        /* voglio dare una regola a tutti i link presenti nella pagina, quindi voglio modificare i tag a */
+
+       a{
+            /* text decoration toglie qualsiasi decorazione al testo */
+            text-decoration: none;
+            color: orange;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+ 
+    <ul id="menu">
+        <li>
+            <a href="./index.html">Home</a>
+        </li>
+        <li>
+            <a href="./chiSiamo.html">Chi Siamo</a>
+        </li>
+
+        <li>
+            <a href="./cosaFacciamo.html">Cosa Facciamo</a>
+        </li>
+        <li>
+            <a href="./contatti.html">Contatti</a>
+        </li>
+
+    </ul>
+
+   
+
+
+
+
+</body>
+</html>

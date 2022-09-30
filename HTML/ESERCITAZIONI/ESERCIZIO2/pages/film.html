@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film</title>
+    <style>
+        /* Le regole CSS legate al menu andranno replicate in ogni pagina, le altre si possono eliminare */
+        /* inizio regole menu */
+
+        #menu {
+            display: block;
+            list-style: none;
+            background-color: cadetblue;
+            width: 1600px;
+            height: 50px;
+
+        }
+
+        /* prendi gli LI contenuti dentro l'elemento html con id="menu" */
+        #menu li {
+            display: block;
+            float: left;
+            line-height: 40px;
+            margin: 10px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* fine regole menu */
+
+        img {
+            width: 24%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ATTENZIONE: siamo dentro pages, quindi per le pagine: film, contatti, chiSiamo e index vanno cambiati i link rispetto alla pagine index -->
+    <ul id="menu">
+        <li>
+            <a href="../index.html">Home</a>
+        </li>
+        <li>
+            <a href="./film.html">Film</a>
+        </li>
+        <li>
+            <a href="./chiSiamo.html">Chi Siamo</a>
+        </li>
+        <li>
+            <a href="./contatti.html">Contatti</a>
+        </li>
+    </ul>
+
+    <br>
+
+
+    <a href="https://it.wikipedia.org/wiki/Il_buono,_il_brutto,_il_cattivo" target="_blank">
+        <img src="../img/locandina_BuonoBC.jpg" alt="locandina film sergio Leone il buono.." title="locandina film ">
+    </a>
+
+    <a href="https://it.wikipedia.org/wiki/Dune_(film_2021)" target="_blank">
+        <img src="../img/locandina_Dune.jpg" alt="locandina film sergio Leone il buono.." title="locandina film ">
+    </a>
+
+
+    <a href="https://it.wikipedia.org/wiki/Joker" target="_blank">
+        <img src="../img/locandina_Joker.jpg" alt="locandina film sergio Leone il buono.." title="locandina film ">
+    </a>
+
+    <a href="https://it.wikipedia.org/wiki/Il_Signore_degli_Anelli" target="_blank">
+
+        <img src="../img/locandina_signAnelli.jpg" alt="locandina film sergio Leone il buono.." title="locandina film ">
+    </a>
+
+</body>
+
+</html>

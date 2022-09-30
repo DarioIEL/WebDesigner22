@@ -1,0 +1,16 @@
+- Basi di HTML ai fini del collegamento ad un file JS 
+    - tag html, head, body, h1..h6.
+    Tag h è un tag la cui numerazione identifica l'importanza del tag, 
+    non la grandezza carattere
+
+    Tag p per i paragrafi
+
+    tag br (famiglia dei tag muti) per andare a capo
+
+    tag hr per tracciare una riga nella pagina
+
+    Tutto ciò che scrivo nell'apertura di un tag è un attributo
+
+    tag a con attributo href
+
+    Commento del codice

@@ -1,0 +1,54 @@
+/* Si utilizza la stessa sintassi adoperata nel tag style */
+
+/* Ho richiamato byTagName il titolo h1.
+TUTTI i tag h1 nella pagina saranno di colore blue */
+h1{
+    color: rgb(51, 61, 242);
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Usando il #nomeId richiamo byId un elemento html */
+#paragrafo{
+    color: orange;
+}
+
+/* il . identifica la classe. Sto recuperando gli elementi ByClassName */
+.paragVerde{
+    color: green;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    line-height: 30px;
+}
+
+.lineaSup{
+    /* Applicando la classe lineaSup dopo paragVerde sto sovrascrivendo la regola text-decoration */
+    text-decoration: overline;
+    background-color: burlywood;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+}
+
+.dimParag{
+    border: 1px solid black;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: justify;
+    background-color: coral;
+}
+
+.mt-2{
+    margin-top: 20px;
+}
+
+.clearfix{
+    clear: both;
+}
