@@ -1,0 +1,9 @@
+Creazione di una libreria
+Costruisci un array di libri, i tuoi preferiti, almeno 6. 
+Ordina alfabeticamente i libri.
+
+Stampa questi libri in una lista di elementi LI.
+
+Utilizza getElementById().
+Stampa prima manualmente.
+Prova poi a stampare con un ciclo FORIN.
