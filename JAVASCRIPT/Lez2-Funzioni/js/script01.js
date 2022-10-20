@@ -22,7 +22,8 @@ function scriviInDemo(nomeUtente, cognomeUtente){
 }
 
 //nel richiamare la funzione passo il valore del parametro
-scriviInDemo("Pippo", "De Pippis");
+scriviInDemo("Mario", "Rossi");
+
 
 //console.log(miaVariabile); //Questo non può funzionare perché mia variabile è dentro la funzione e quindi variabile locale
 
@@ -45,7 +46,6 @@ var areaRettangolo1 = calcolaArea(10,6); //dentro questa variabile verrà salvat
 demo.innerHTML += "<br> " + areaRettangolo1;
 console.log(areaRettangolo1);
 
-
 var areaRettangolo2 = calcolaArea(7,3);
 var areaRettangolo3 = calcolaArea(4,8);
 
@@ -64,5 +64,7 @@ function saluta2(nome, cognome){
 var salutoUtente1 = saluta2("Dario", "Mennillo");
 
 console.log(salutoUtente1);
+
+console.log(saluta2("Mario", "Bianchi"));
 
 

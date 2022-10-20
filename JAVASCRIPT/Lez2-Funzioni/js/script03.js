@@ -24,10 +24,31 @@ function saluta(){
     var nomeUtente = document.getElementById('nomeUtente').value;
     var cognomeUtente = document.getElementById('cognomeUtente').value;
 
-    if(nomeUtente.trim() == "" || cognomeUtente.trim() == ""){
+    //prendo i campi input per poter applicare la classe
+    var inputNome = document.getElementById('nomeUtente');
+    var inputCognome = document.getElementById('cognomeUtente');
+
+    inputNome.removeAttribute('class');
+    inputCognome.removeAttribute('class');
+
+    if(nomeUtente.trim() == "" && cognomeUtente.trim() == ""){
         // demo.innerHTML = "Non hai inserito il tuo nome";
-        demo.innerHTML = "Hai dimenticato un campo."
+        demo.innerHTML = "Hai dimenticato tutti i campi";
+        inputNome.setAttribute("class","bordoRed");
+        inputCognome.setAttribute("class", "bordoRed");
+        
+    }else if(nomeUtente.trim() == "" && cognomeUtente.trim() != ""){
+        demo.innerHTML = "Hai dimenticato il nome";
+        inputNome.setAttribute("class", "bordoRed");
+        
+    }else if(nomeUtente.trim() != "" && cognomeUtente.trim() == ""){
+        demo.innerHTML = "Hai dimenticato il cognome";
+        inputCognome.setAttribute("class", "bordoRed");
     }else{
         demo.innerHTML = "Ciao " + nomeUtente + " " + cognomeUtente;
+        //pulire i campi
+        document.getElementById('nomeUtente').value = '';
+        document.getElementById('cognomeUtente').value = '';
+        
     }
 }
