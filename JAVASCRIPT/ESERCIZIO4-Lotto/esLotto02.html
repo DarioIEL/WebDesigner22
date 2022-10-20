@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Gioco del Lotto</h1>
+
+    <p>L'utente sceglierà quanti numeri estrarre, minimo 1 massimo 10</p>
+    <p>Controllare che effettivamente l'utente inserisce un numero al momento della compilazione altrimenti restituisci un avviso. 
+    Se l'utente non inserisce nulla stampare un avviso.</p>
+    <p>Crea un div demo nel quale inserirari i numeri estratti, uno accanto all'altro in un cerchio colorato.</p>
+
+    <input type="text" id="numeriDaEstrarre">
+
+    <button onclick="estrai()">Estrai</button>
+
+    <script>
+       
+    function estrai(){
+        var numeri = [];
+
+        var numeriDaEstrarre = document.getElementById('numeriDaEstrarre').value;
+
+        //numeriDaEstrarre va controllata se è compresa tra 1 e 10, solo in questo caso può stampare
+
+        for(var i = 0; i < numeriDaEstrarre; i++){
+            var numero = Math.ceil(Math.random() * 90); 
+            if(numeri.indexOf(numero) != -1){ 
+                i--;
+            }else{
+                numeri.push(numero);
+            }
+        }
+        console.log(numeri); 
+    }
+        
+    
+
+    </script>
+</body>
+</html>
