@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Gioco del Lotto</h1>
+
+    <p>L'utente sceglierà quanti numeri estrarre, minimo 1 massimo 10</p>
+
+    <input type="text" id="numeriDaEstrarre">
+
+    <button onclick="estrai()">Estrai</button>
+
+    <script>
+        //90 numeri
+        var numeri = [];
+        // var numeriRipetenti = [];
+        
+        //il for cicla 6 volte per trovare 6 numeri differenti e metterli nell'array
+        for(var i = 0; i < 6; i++){
+            var numero = Math.ceil(Math.random() * 90); 
+            if(numeri.indexOf(numero) != -1){ //se il numero è presente allora tira fuori un indice numerico che è diverso da -1
+                
+                // numeriRipetenti.push(numero);
+                //fai qualcosa, scartalo, cioè ripeti il giro corrente
+                i--;
+
+            }else{
+                numeri.push(numero);
+            }
+        }
+        
+        console.log(numeri);
+        // console.log(numeriRipetenti);
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -16,8 +16,7 @@ var demo = document.getElementById('demo'); //variabile GLOBALE, visibile ovunqu
 
 function scriviInDemo(nomeUtente, cognomeUtente){
     demo.innerHTML = "<h2>Ciao " + nomeUtente + " " + cognomeUtente + "</h2>";
-    
-    
+
     var miaVariabile = 10; //variabile LOCALE, non visibile all'esterno della funzione
     console.log(miaVariabile);
 }
@@ -26,6 +25,7 @@ function scriviInDemo(nomeUtente, cognomeUtente){
 scriviInDemo("Pippo", "De Pippis");
 
 //console.log(miaVariabile); //Questo non può funzionare perché mia variabile è dentro la funzione e quindi variabile locale
+
 
 ////////////////funzione con return////////////////
 
