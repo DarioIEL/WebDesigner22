@@ -1,0 +1,5 @@
+Costruire un carosello ( 5 immagini )
+
+Crea un div nella pagina html all'interno del quale si alterneranno in successione le 5 immagini. Lo scorrimento dovrà avvenire un'immagine alla volta cliccando sul pulsante ruota.
+Arrivato all'ultima immagine il carosello dovrà ricominciare dalla prima
+

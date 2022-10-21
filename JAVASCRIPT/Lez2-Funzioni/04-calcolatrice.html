@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <h1>Calcolatrice</h1>
+
+    <p>Inserisci due numeri nei rispettivi campi e clicca su un pulsante per eseguire l'operazione</p>
+
+    <input class="mb-2" type="number" placeholder="primo numero" id="primoNum" > <br>
+    <input class="mb-2" type="number" placeholder="secondo numero" id="secondoNum"><br>
+    <input type="button" value="+" onclick="somma()">
+    <input type="button" value="x" onclick="moltiplica()">
+    <input type="button" value="-" onclick="sottrai()">
+    <input type="button" value="/" onclick="dividi()">
+    <input type="button" value="Reset" onclick="reset()">
+
+    <div id="risultato"></div>    
+
+    <script src="./js/script04.js"></script>
+</body>
+</html>

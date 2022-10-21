@@ -1,3 +1,7 @@
 .bordoRed{
     border: 1px solid red;
 }
+
+.mb-2{
+    margin-bottom: 20px;
+}
