@@ -1,0 +1,10 @@
+.numeroEstr{
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    float: left;
+    background-color: coral;
+}

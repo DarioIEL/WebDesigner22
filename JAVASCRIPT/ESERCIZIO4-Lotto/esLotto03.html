@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+    <h1>Gioco del Lotto</h1>
+
+    <p>L'utente sceglierà quanti numeri estrarre, minimo 1 massimo 10</p>
+    <p>Controllare che effettivamente l'utente inserisce un numero al momento della compilazione altrimenti restituisci un avviso. 
+    Se l'utente non inserisce nulla stampare un avviso.</p>
+    <p>Crea un div demo nel quale inserirari i numeri estratti, uno accanto all'altro in un cerchio colorato.</p>
+
+    <input type="text" id="numeriDaEstrarre">
+
+    <button onclick="estrai()">Estrai</button>
+
+    <div id="demo"></div>
+
+    <script>
+
+    // var demo = document.getElementById('demo');
+
+    // function estrai(){
+
+    //     var numeri = [];
+    //     var numeriDaEstrarre = document.getElementById('numeriDaEstrarre').value;
+
+    //     if(isNaN(numeriDaEstrarre)){
+    //         demo.innerHTML = "Non hai inserito un numero";
+    //     }else if(numeriDaEstrarre < 1 || numeriDaEstrarre > 10 || numeriDaEstrarre == ''){
+    //         demo.innerHTML = "Per favore inserisci un numero compreso tra 1 e 10";
+    //     }else{
+    //         //pulisco il div demo
+    //         demo.innerHTML = '';
+    //         //il for estrae e stampa in console
+    //         for(var i = 0; i < numeriDaEstrarre; i++){
+    //             var numero = Math.ceil(Math.random() * 90); 
+    //             if(numeri.indexOf(numero) != -1){ 
+    //                 i--;
+    //             }else{ 
+    //                 numeri.push(numero);
+    //             }
+    //         }
+            
+    //         //stampo i numeri nel div demo
+    //         console.log(numeri);
+    //         for(var i = 0; i < numeri.length; i++){
+    //             demo.innerHTML += "<div class='numeroEstr'>" + numeri[i] + "</div>";
+    //         }
+            
+    //     }
+        
+    //     document.getElementById('numeriDaEstrarre').value = "";
+    // }
+    
+
+    var demo = document.getElementById('demo');
+
+    function controlla(numeriDaEstrarre){
+      
+        if(isNaN(numeriDaEstrarre)){
+            demo.innerHTML = "Non hai inserito un numero";
+            return false;
+        }else if(numeriDaEstrarre < 1 || numeriDaEstrarre > 10 || numeriDaEstrarre == ''){
+            demo.innerHTML = "Per favore inserisci un numero compreso tra 1 e 10";
+            return false;
+        }else{
+            demo.innerHTML = '';
+            return true;
+        }
+
+    }
+
+    function estrai(){
+        var numeriDaEstrarre = document.getElementById('numeriDaEstrarre').value;
+        var numeri = [];
+
+        if(controlla(numeriDaEstrarre)){
+            //estrae i numeri
+             for(var i = 0; i < numeriDaEstrarre; i++){
+                var numero = Math.ceil(Math.random() * 90); 
+                if(numeri.indexOf(numero) != -1){ 
+                    i--;
+                }else{ 
+                    numeri.push(numero);
+                }
+            }
+            stampa(numeri); 
+        }
+    }
+
+    /**
+    *@input numeri[]
+    */
+    function stampa(numeri){
+        for(var i = 0; i < numeri.length; i++){
+                demo.innerHTML += "<div class='numeroEstr'>" + numeri[i] + "</div>";
+            }
+    }
+
+
+    </script>
+</body>
+</html>
