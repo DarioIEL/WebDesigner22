@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body>
+    <h1>Oggetto Studente (notazione Letterale)</h1>
+
+    <div id="demo"></div>
+
+    <script>
+        
+        //Definisco un oggetto con notazione letterale
+        var studente = {
+            nome: "Dario",
+            cognome: "Mennillo",
+            eta: 33,
+            matricola: 123,
+            presenza: true,
+            materie: ['Javascript', 'Java', 'Angular', 'HTML&CSS'],
+            zaino:{
+                marca: "Invicta",
+                capacitaInLitri: 20,
+                contenuto: ['penna', 'pc portatile', 'mouse', 'tastiera']
+            },
+
+            presentati: function(){
+                //console.log("Ciao mi chiamo " + this.nome + " " + this.cognome);
+                var msg = "Ciao mi chiamo " + this.nome + " " + this.cognome + ".<br> Sto studiando le seguenti materie: ";
+
+                for(var i = 0; i < this.materie.length ; i++){
+                    msg += "<li> " + this.materie[i] + "</li>";
+                }
+
+                var msgZaino = '<br> Nello zaino ho le seguenti cose:';
+
+                for(var i = 0; i < this.zaino.contenuto.length; i++){
+                    msgZaino += "<li>" + this.zaino.contenuto[i] + " </li>";
+                }
+
+                return msg + msgZaino;
+            }
+        }
+
+        //fuori dall'oggetto richiamo proprietà e metodi
+        console.log(studente.nome, studente.matricola, studente.presenza);
+
+        var demo = document.getElementById('demo');
+        demo.innerHTML = studente.presentati();
+
+        // Costruire l'oggetto "persona" con le seguenti proprietà
+        // nome, cognome, corso, voto, presentati(), controllaEsame()
+        // controllaEsame() -> verifica se il voto è inferiore a 18 e stampa "mi dispiace, non hai superto l'esame", se superiore a 18 stamperà: "complimenti hai superato l'esame con il seguente voto: voto ".
+
+        // la stampa di queste stringhe deve avvenire nel documento HTML
+
+        var immagini = [
+            {
+                percorso: "./....",
+                titolo: "Sport acquatico",
+                alt: "Persone che nuotano in piscina",
+                mostra: false
+            },
+            {
+                percorso: "./....",
+                titolo: "Sport di gruppo",
+                alt: "Persone che giocano a pallavolo",
+                mostra: true
+            }
+        ]
+    </script>
+</body>
+</html>
