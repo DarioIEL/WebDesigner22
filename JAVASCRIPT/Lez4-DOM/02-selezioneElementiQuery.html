@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Spesa</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Lista Spesa</h1>
+    <ul id="listaSpesa">
+        <li id="uno" class="txtRed">Pane</li>
+        <li id="due" class="txtRed">Pasta</li>
+        <li id="tre" class="txtRed">Pesce</li>
+        <li id="quattro" class="txtBlue">Olio</li>
+        <li id="cinque" class="txtBlue">Vino</li>
+        <li id="sei" class="txtBlue">Carne</li>
+    </ul>
+
+    <h2>Lista cose da fare</h2>
+    <ul id="listaCoseDaFare">
+        <li>Andare dal dentista</li>
+        <li>Sistemare la bici</li>
+        <li>Comprare una camera d'aria</li>
+        <li>Rinnovare iscrizione palestra</li>
+    </ul>
+
+    <script>
+        //QUERY SELECTOR Recupera un solo elemento alla volta
+        //Sintassi css come selettore, il querySelector() recupera la prima occorrenza anche se gli passiamo una sintassi per più elementi
+        var primoEl = document.querySelector('li#uno.txtRed');
+        console.log(primoEl);
+
+        var primoEl2 = document.querySelector('li#uno');
+        console.log(primoEl2);
+        
+        var primoEl3 = document.querySelector('#uno');
+        console.log(primoEl3);
+
+        var primoEl4 = document.querySelector('li'); //prende la prima occorrenza
+        console.log(primoEl4);
+
+        var primoEl5 = document.querySelector('li.txtRed');
+        console.log(primoEl5);
+
+        var sestoElemento = document.querySelector('li#sei');
+        console.log(sestoElemento);
+
+        // //QUERY SELECTOR ALL 
+        // var tuttiLI = document.querySelectorAll('li'); //NODELIST
+        // console.log(tuttiLI);
+
+        // //aggiungere la classe txtBarrato a tutti
+        // for(var i = 0; i < tuttiLI.length; i++){
+        //     tuttiLI[i].classList.add('txtBarrato');
+        // }
+
+        //PRENDO GLI LI SOLO DEL SECONDO UL
+        // var uls = document.querySelectorAll('ul'); //recupero tutti gli ul
+        // console.log(uls);
+        // var liCoseDaFare = uls[1].querySelectorAll('li'); //prendo gli li del secondo ul 
+
+        // for(var i = 0; i < liCoseDaFare.length; i++){
+        //     liCoseDaFare[i].classList.add('txtBarrato')
+        // }
+
+        var liCoseDaFare = document.querySelectorAll('ul#listaCoseDaFare li');
+        [...liCoseDaFare].forEach( element =>{
+            element.classList.add('txtBarrato')
+            element.classList.add('txtGreen')
+        });
+
+        //Recupero solo gli li rossi per mettere il testo barrato
+        var liRossi = document.querySelectorAll('li.txtRed');
+        [...liRossi].forEach(element => {
+            element.classList.add('txtBarrato');
+        });
+
+
+    </script>
+</body>
+</html>

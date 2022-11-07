@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Spesa</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Lista Spesa</h1>
+    <ul>
+        <li id="uno" class="txtRed">Pane</li>
+        <li id="due" class="txtRed">Pasta</li>
+        <li id="tre" class="txtRed">Pesce</li>
+        <li id="quattro" class="txtBlue">Olio</li>
+        <li id="cinque" class="txtBlue">Vino</li>
+        <li id="sei" class="txtBlue txtBarrato">Carne</li>
+    </ul>
+
+
+
+    <script>
+
+    //GET ELEMENT BY ID
+    var primoEl = document.getElementById('uno');
+    console.log(primoEl);
+
+    //Prendo più elementi
+    //GetElementsByClassName()
+    //GetElementsByTagName()
+    //Producono una Nodelist, cioè un HTMLCollection da trattare come un Array
+    var lis = document.getElementsByTagName('li');
+    
+    console.log(lis); //<li id=quattro> Olio </li>
+    console.log(lis.item(3).textContent);//Olio
+    console.log(lis[3].textContent); //Olio
+    console.log(lis[3].id); //quattro
+    console.log(lis[3].className); //txtBlue
+    console.log(lis[3].tagName);
+    console.log(lis[3].parentNode.textContent);
+    
+
+    //voglio stampare tutti i contenuti testuali
+    for(var i = 0; i < lis.length; i++){
+        console.log(lis[i].textContent);
+    }
+    
+    //dato che lis è una NODELIST non posso applicare il foreach a meno che non trasformi la nodelist in array attraverso l'operatore [...Nodelist]
+    
+    [...lis].forEach(element => {
+        console.log(element.textContent);
+    });
+    
+    var lisRed = document.getElementsByClassName('txtRed');
+    console.log(lisRed);
+    
+    var lisBlue = document.getElementsByClassName('txtBlue');
+    console.log(lisBlue);
+    
+    //Voglio trasformare un elemento blue in un elemento rosso
+    lisBlue[1].className = 'txtRed';
+
+    //Trasformo la classe dell'ultimo elemento blu
+    
+    console.log(lisBlue[1].classList);
+    lisBlue[1].classList.replace('txtBlue', 'txtRed');
+
+    </script>
+</body>
+</html>
