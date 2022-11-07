@@ -6,8 +6,19 @@ function Studente(nome, cognome, matricola, anno){
     this.anno = anno;
 
     this.presentati = function(){
-        var msg = "Nome: " + this.nome + " - Cognome: " + this.cognome + " - Matricola: " + this.matricola + " - Anno Iscrizione: " + this.anno;
+        var msg = "Nome: " + this.nome + " - Cognome: " + this.cognome + 
+        " <br> - <span >Matricola: " + this.matricola + "</span> - Anno Iscrizione: " + this.anno;
         return msg;
+    };
+
+   
+    this.modMatricola = function(){
+        if(this.matricola <= 0){
+            alert('Studente non più iscritto')
+        }else{
+            this.matricola--;
+            console.log("Hai scalato la matricola di: " + this.nome);
+        }
     }
 
 }
@@ -74,9 +85,23 @@ var listaStudenti = document.getElementById('listaStudenti');
 function stampaLista(){
     listaStudenti.innerHTML = '';
 
-    classe.forEach(studente => {
-        listaStudenti.innerHTML += studente.presentati() + "<button onclick=eliminaStud('studente')>Elimina</button> <br>"
-    });
+    // var i = 0; //questo indice rappresenterà l'indice del singolo oggetto nell'Array
+
+    // classe.forEach(studente => {
+    //     listaStudenti.innerHTML += studente.presentati() +  "<button onclick='modificaMatricola("+i+")'>Scala Matricola</button> <br> <hr>";
+    //     i++;
+    // });
+
+    for(var i = 0; i < classe.length; i++){
+        listaStudenti.innerHTML += classe[i].presentati() +  "<button onclick='modificaMatricola("+i+")'>Scala Matricola</button> <br> <hr>";
+    }
+}
+
+function modificaMatricola(indice){
+    //deve far partire il metodo dell'oggetto che cambia la matricola
+    classe[indice].modMatricola();
+    stampaLista();
+
 }
 
 stampaLista();
@@ -91,7 +116,6 @@ function pulisciCampiInput(){
 function controllaCampi(){
   
     if(document.getElementById('nome').value == '' || document.getElementById('cognome').value == ''|| document.getElementById('matricola').value == '' || document.getElementById('anno').value == ''){
-
         return false;
     }else{
         return true;
