@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Film</h1>
+
+    <ul id="listaFilm">
+        <li>bamby</li>
+        <li>Once upon a time in America</li>
+        <li>Harry Potter e i doni della morte</li>
+        <li>The good, the bad and the ugly</li>
+        <li>la vita è bella</li>
+        <li>Mediterraneo</li>
+    </ul>
+
+
+    <script>
+        // i titoli dei film devono diventare un link alla pagina wiki
+
+        //estrarre il contenuto di un singolo li
+        //devo circondare il contenuto con un a href
+        //reinserire in li 
+
+        var lis = document.querySelectorAll('ul#listaFilm li');
+
+        var titoli = [];
+
+        for(var i = 0; i < lis.length; i++){
+            titoli.push(lis[i].textContent);
+            costruisciLink(titoli[i], lis[i]);
+        }
+
+        console.log(titoli);
+
+        function costruisciLink(titoloFilm, li){
+            var a = document.createElement('a');
+            a.setAttribute('href', 'https://it.wikipedia.org/wiki/' + titoloFilm); //<a href='linkAWiki'></a>
+            a.textContent = titoloFilm; //<a href='linkAWiki'> Harry Potter</a>
+            
+            var img = document.createElement('img');
+            var linkUns = titoloFilm.split(" ").join("+");
+
+            img.setAttribute('src', 'https://source.unsplash.com/200x200/?'+linkUns);
+
+            li.replaceChildren(a, img);
+       }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
