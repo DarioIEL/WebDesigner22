@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -20,18 +21,57 @@
 
     <h2>Lista cose da fare</h2>
     <ul id="listaCoseDaFare">
-        <li>Andare dal dentista</li>
-        <li>Sistemare la bici</li>
-        <li>Comprare una camera d'aria</li>
-        <li>Rinnovare iscrizione palestra</li>
+        <li class="secondi">Andare dal dentista</li>
+        <li class="secondi">Sistemare la bici</li>
+        <li class="secondi">Comprare una camera d'aria</li>
+        <li class="secondi">Rinnovare iscrizione palestra</li>
     </ul>
 
     <script>
         //Senza toccare l'html
         //imposta il colore arancione a Pesce, Olio e Rinnovare iscrizione palestra
         //imposta il colore rosso a <h2>Lista Spesa</h2>, il colore blu <h2>Lista cose da fare</h2>
-        //imposta il grassetto a entrambi gli h2
+        //imposta il sottolineato a entrambi gli h2
         //Nella lista delle cose da fare imposta la classe txtBarrato solo agli elementi pari
+
+        var uls = document.querySelectorAll('ul');
+
+        var elTre = uls[0].querySelectorAll('li.txtRed')[2];
+
+        elTre.className = 'txtOrange';
+
+        
+        uls[0].querySelectorAll('li.txtBlue')[0].className = 'txtOrange';
+        
+        var palestra = uls[1].lastElementChild.classList.add('txtOrange');
+
+        var hs = document.querySelectorAll('h2');
+        hs[0].className = 'txtRed';
+        hs[1].className = 'txtBlue';
+
+        [...hs].forEach(element => {
+            element.classList.add('txtSottolineato');
+        });
+
+        var lisListaCoseDaFare = document.querySelectorAll('ul#listaCoseDaFare li');
+        for(var i = 0; i < lisListaCoseDaFare.length; i++){
+            if(i%2 != 0){
+                lisListaCoseDaFare[i].classList.add('txtBarrato');
+            }
+        }
+
+
+        
+
+        // var lisListaCoseDaFare = document.getElementsByClassName('secondi');
+
+        // console.log(lisListaCoseDaFare);
+
+        // for(var i = 0; i < lisListaCoseDaFare.length; i++){
+        //     lisListaCoseDaFare[i].classList.add('txtBarrato');
+        // }
+        
+
 
 
     </script>

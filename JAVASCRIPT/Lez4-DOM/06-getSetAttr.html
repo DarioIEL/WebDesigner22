@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>ToDo List</h1>
+    
+    <ul id="listaToDo">
+        <li class="txtOrange" id="primoEl" title="Cinema" >Andare al cinema</li>
+        <li class="txtOrange">Fare una passeggiata</li>
+        <li class="txtOrange">Studiare</li>
+    </ul>
+
+    <script>
+
+        //GET ATTRIBUTE - prendo il valore dei singoli attributi
+        var primoEl = document.querySelector('#primoEl');
+
+        var titolo = primoEl.getAttribute('title');
+        var id = primoEl.getAttribute('id');
+        var classe = primoEl.getAttribute('class');
+
+        
+        if(primoEl.hasAttribute('src')){ //hasAttribute() controlla l'esistenza di un attributo
+            var src = primoEl.getAttribute('src');
+        }else{
+            var src = "Non ci sono attributi src";
+        }
+        
+        console.log(titolo +  " " + id + " " + classe + " " + src);
+        
+
+        //SET ATTRIBUTE - setta il valore di qualsiasi attributo
+        var secondoEl = document.querySelectorAll('li')[1];
+        //setto un id
+        secondoEl.setAttribute('id', 'secondoEl');
+        //setto un title
+        secondoEl.setAttribute('title', 'Passeggiata');
+        secondoEl.setAttribute('class','txtOrange txtBarrato');
+
+        // secondoEl.classList.add('txtBarrato');
+
+
+        //REMOVE ATTRIBUTE
+        secondoEl.removeAttribute('id');
+
+        
+    </script>
+</body>
+</html>

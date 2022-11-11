@@ -13,3 +13,11 @@
 .txtBarrato{
     text-decoration: line-through;
 }
+
+.txtSottolineato{
+    text-decoration: underline;
+}
+
+.txtOrange{
+    color: orange;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="sezione1"></div>
+
+    <ul id="listaToDo">
+        <li>Andare al cinema</li>
+        <li>Fare una passeggiata</li>
+        <li>Studiare</li>
+    </ul>
+
+
+
+
+    <script>
+        //CREA ELEMENTO
+        var sezione1 = document.querySelector('#sezione1');
+
+        var mioParagrafo = document.createElement('p');
+        var txtParagrafo = document.createTextNode('Ciao Dario');
+
+        //aggancio il testo al paragrafo
+        //con appendChild() aggancio un elemento ad un altro, aggancio un figlio al genitore
+        mioParagrafo.appendChild(txtParagrafo);
+
+        sezione1.appendChild(mioParagrafo);
+
+        //Alternativa con innertHTML e textContent da fare dopo()
+
+
+        //Aggiungere un li alla listaToDo
+
+        var ul = document.querySelector('ul');
+
+        var nuovoLi = document.createElement('li');
+        var nuovoTxt = document.createTextNode('Comprare libri');
+
+        nuovoLi.appendChild(nuovoTxt);
+        ul.appendChild(nuovoLi);
+
+        var nuovoLi2 = document.createElement('li');
+        nuovoLi2.textContent = "Prendere Appunti";
+        // ul.appendChild(nuovoLi2); //inserisce alla fine
+        ul.prepend(nuovoLi2); //inserisce all'inizio
+
+     
+        //RIMUOVI ELEMENTO
+
+        var elDaRimuovere = document.querySelectorAll('li')[1];
+        var contenitoreElemento = document.querySelector('ul');
+
+        contenitoreElemento.removeChild(elDaRimuovere);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
