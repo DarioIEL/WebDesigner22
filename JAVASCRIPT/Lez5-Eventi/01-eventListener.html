@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi</title>
+</head>
+<body>
+    
+    <h1>Eventi</h1>
+    <p>Gestione eventi con eventListener</p>
+
+    <input type="text" id="nomeUtente" placeholder="Inserisci il tuo nome">
+    <button id="btn">Saluta</button>
+    <div id="demo">
+    </div>
+
+    <script>
+    // var demo = document.querySelector('#demo');
+    
+    // function saluta(){
+    //     demo.innerHTML = "Ciao Dario";
+    // }
+
+    // //recupero l'elemento su cui applicare il listener
+    // var btn = document.querySelector('#btn');
+
+    // //aggancio i llistener all'elemento
+    // btn.addEventListener('click', saluta, false);
+
+
+    //STESSA COSA DI PRIMA MA CON UN PARAMETRO DENTRO SALUTA
+    // var demo = document.querySelector('#demo');
+    
+    // function saluta(nomeUtente){
+    //     demo.innerHTML = "Ciao " + nomeUtente;
+    // }
+
+    // var btn = document.querySelector('#btn');
+
+    // //nel caso in cui abbiamo delle funzioni con parametri devo utilizzare un "wrapper", cioè una funzione anonima che richiama saluta
+
+    // btn.addEventListener('click', function(){
+    //     saluta("Dario");
+    // },false);
+
+
+    //Adesso il parametro verrà recuperato da un campo input
+    var demo = document.querySelector('#demo');
+    
+    function saluta(nomeUtente){
+        demo.innerHTML = "Ciao " + nomeUtente;
+    }
+
+    var btn = document.querySelector('#btn');
+
+    btn.addEventListener('click', function(){
+        var nomeUtente = document.querySelector('#nomeUtente').value;
+        saluta(nomeUtente);
+    },false);
+    
+
+
+
+    </script>
+
+</body>
+</html>

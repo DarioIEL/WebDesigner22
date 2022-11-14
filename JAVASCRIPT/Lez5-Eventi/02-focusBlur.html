@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Registrati</h1>
+    <p>Compila tutti i campi</p>
+
+
+    <!-- Il metodo GET scrive i name dei campi input e il loro valore nell'url. Il metodo POST non scrive nulla nell'url -->
+
+    <form action="http://www.example.org" method="POST" id="formRegistrazione">
+
+        <label for="username">Crea Username: </label>
+        <input type="text" id="username" name="username">
+        <div id="feedUser"></div>
+
+
+        <label for="password">Crea Password:</label>
+        <input type="text" id="password" name="password">
+        <div id="feedPass"></div>
+        <br>
+
+        <input type="submit" value="Registrati">
+
+    </form>
+    
+
+    <script>
+        
+        var username = document.querySelector('#username');
+        //quando l'utente mette a fuoco il campo username facciamo comparire un suggerimento
+        function suggerisciUsername(){
+            document.querySelector('#feedUser').textContent = "Mi raccomando il tuo username deve essere superiore a 5 caratteri";
+        }
+
+        //quando l'utente clicca all'esterno del campo input fa scattare una funzione al blur che controlla il campo 
+
+        function controllaUsername(){
+            document.querySelector('#feedUser').textContent = '';
+            var username = document.querySelector('#username').value;
+            if(username.length <= 5){
+                document.querySelector('#feedUser').setAttribute('class', 'txtRed');
+                document.querySelector('#username').setAttribute('class', 'bordoRed');
+                document.querySelector('#feedUser').textContent = '*Fai attenzione, il tuo username è troppo corto';
+
+                //impedisce che il form venga lanciato se il campo non è compilato bene
+                event.preventDefault();
+            }
+        }
+
+
+        function premiInvio(){
+            console.log(event.keyCode);
+            if(event.key == "Enter"){
+                console.log("Ciao");
+                console.log(event);
+                controllaTutto();
+            }
+        }
+
+        username.addEventListener('focus', suggerisciUsername, false);
+        username.addEventListener('blur', controllaUsername, false);
+        
+        username.addEventListener('keyup', premiInvio, false);
+
+        var formRegistrazione = document.querySelector('#formRegistrazione');
+
+        function controllaTutto(){
+            controllaUsername();
+        }
+
+        formRegistrazione.addEventListener('submit', controllaTutto, false);
+
+
+
+
+
+    </script>
+</body>
+</html>

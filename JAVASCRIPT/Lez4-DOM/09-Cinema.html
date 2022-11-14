@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Cinema</h1>
+    <p>Lista dei film in sala</p>
+
+    <p>Scorri la galleria dei film in sala</p>
+
+    <div class="container">
+        <h2 id="titolo"></h2>
+        <figure>
+            <img id="locandina">
+        </figure>
+        <ul id="attori">
+
+        </ul>
+        <p id="durata"></p>
+        <p id="anno"></p>
+        <p id="genere"></p>
+
+        <button id="preFilm">Precedente</button>
+        <button id="nextFilm">Successivo</button>
+    </div>
+
+    <script>
+        var films = [
+            {
+                titolo: "C'era una volta in America",
+                durata: 00,
+                anno: 1984,
+                genere: 'drammatico, gangster',
+                attori: ['Robert De Niro', 'James Woods', 'Joe Pesci', 'Jennifer Connely'],
+                locandina: 'https://i.ebayimg.com/images/g/UlwAAOSwNJ1gjeXQ/s-l400.jpg'
+            },
+            {
+                titolo: "Harry Potter e i doni della morte",
+                durata: 120,
+                anno: 2010,
+                genere: 'Fantasy, magia',
+                attori: ['Daniel Radcliff', 'Emma Watson', 'Rupert Grint', 'Ralph Finnies'],
+                locandina: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQk00LMz929unWpQ-7p0QATNVCD364W5PoWQNVp5dzpIimdfRyq'
+            }
+        ];
+
+        var titolo = document.querySelector('#titolo');
+        var locandina = document.querySelector('#locandina');
+        var attori = document.querySelector('#attori');
+        var anno = document.querySelector('#anno');
+        var genere = document.querySelector('#genere');
+        var durata = document.querySelector('#durata');
+        
+        function inserisciFilm(indice){
+            titolo.textContent = films[indice].titolo;
+        }
+        
+
+        var btnPre = document.querySelector('#preFilm');
+        var btnNext = document.querySelector('#nextFilm');
+
+        var indice = 0;
+        //in questo caso la funzione inserisciFilm che accetta un parametro in ingresso deve essere wrappata con una funzione anonima
+        btnNext.addEventListener('click', function(){
+            indice++;
+            inserisciFilm(indice);
+        });
+
+        btnPre.addEventListener('click', function(){
+            indice--;
+            inserisciFilm(indice);
+        });
+
+        
+        // //EVENT LISTENER
+        // btnPre.addEventListener('click', saluta, false);
+        // function saluta(){
+        //     console.log("ciao");
+        // }
+
+        inserisciFilm(indice);
+
+        //DA continuare a casa
+
+    </script>
+</body>
+</html>

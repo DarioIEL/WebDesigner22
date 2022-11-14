@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -30,8 +31,40 @@
          * Cambia il valore di h2 in "Numero di cose da acquistare: numero"
          **/
 
+        var ul = document.querySelector('ul');
+
+        var li1 = document.createElement('li');
+        li1.textContent = "Vino";
+        ul.prepend(li1);
+
+        var li2 = document.createElement('li');
+        li2.textContent = "Uova";
+        ul.appendChild(li2);
+
+        var lis = document.querySelectorAll('li');
         
-        
+        // for(var i = 0; i < lis.length; i++){
+        //     creaButton(lis[i]);
+        // }
+
+        // function creaButton(li){
+        //     var btn = document.createElement('button');
+        //     btn.textContent = "Segna"; 
+        //     btn.onclick = function(){
+        //         li.setAttribute('class', 'txtBarrato');
+        //     }
+        //     li.appendChild(btn);
+        // }
+
+        lis.forEach(element =>{
+            var btn = document.createElement('button');
+            btn.textContent = "Segna";
+            btn.onclick = function(){
+                element.setAttribute('class','txtBarrato')
+            }
+            element.append(btn);
+        });
+
     </script>
 
 
