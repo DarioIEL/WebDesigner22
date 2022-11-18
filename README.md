@@ -8,4 +8,4 @@ Repo Corso Web Designer
 - [DOM](https://github.com/DarioIEL/WebDesigner22/tree/main/JAVASCRIPT/Lez4-DOM)
 - [Eventi](https://github.com/DarioIEL/WebDesigner22/tree/main/JAVASCRIPT/Lez5-Eventi)
 
-- [Esercizi] (https://github.com/DarioIEL/WebDesigner22/tree/main/JAVASCRIPT)
+- [Esercizi](https://github.com/DarioIEL/WebDesigner22/tree/main/JAVASCRIPT)
