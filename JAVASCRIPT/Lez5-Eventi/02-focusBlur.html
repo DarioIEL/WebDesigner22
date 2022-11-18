@@ -37,12 +37,14 @@
         var username = document.querySelector('#username');
         //quando l'utente mette a fuoco il campo username facciamo comparire un suggerimento
         function suggerisciUsername(){
+            console.log(event); //event è focus
             document.querySelector('#feedUser').textContent = "Mi raccomando il tuo username deve essere superiore a 5 caratteri";
         }
 
         //quando l'utente clicca all'esterno del campo input fa scattare una funzione al blur che controlla il campo 
 
         function controllaUsername(){
+            console.log(event);
             document.querySelector('#feedUser').textContent = '';
             var username = document.querySelector('#username').value;
             if(username.length <= 5){
@@ -57,7 +59,7 @@
 
 
         function premiInvio(){
-            console.log(event.keyCode);
+            console.log(event);
             if(event.key == "Enter"){
                 console.log("Ciao");
                 console.log(event);
@@ -65,9 +67,11 @@
             }
         }
 
+        //username è il campo input del nome utente
         username.addEventListener('focus', suggerisciUsername, false);
         username.addEventListener('blur', controllaUsername, false);
         
+        //keyup è un evento generato dalla tastiera
         username.addEventListener('keyup', premiInvio, false);
 
         var formRegistrazione = document.querySelector('#formRegistrazione');

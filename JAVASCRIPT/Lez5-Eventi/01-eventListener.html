@@ -27,10 +27,10 @@
     // var btn = document.querySelector('#btn');
 
     // //aggancio i llistener all'elemento
-    // btn.addEventListener('click', saluta, false);
+    // btn.addEventListener('click', saluta);
 
 
-    //STESSA COSA DI PRIMA MA CON UN PARAMETRO DENTRO SALUTA
+    // //STESSA COSA DI PRIMA MA CON UN PARAMETRO DENTRO SALUTA
     // var demo = document.querySelector('#demo');
     
     // function saluta(nomeUtente){
@@ -56,14 +56,13 @@
     var btn = document.querySelector('#btn');
 
     btn.addEventListener('click', function(){
+        console.log(event);
         var nomeUtente = document.querySelector('#nomeUtente').value;
         saluta(nomeUtente);
     },false);
     
 
-
-
-    </script>
+  </script>
 
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione</title>
+</head>
+<body>
+    
+    <h1>Registrazione piattaforma</h1>
+
+    <form action="https://www.example.org" method="GET" id="mioForm">
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <br>
+        
+        <label for="cognome">Cognome:</label>
+        <input type="text" name="cognome" id="cognome">
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <br>
+
+        <label for="codFis">Codice Fiscale:</label>
+        <input type="text" name="codFis" id="codFis">
+        <br>
+
+        <label for="cap">CAP: </label>
+        <input type="text" name="cap" id="cap">
+        <br>
+
+        <label for="tipoUser">Tipologia:</label>
+        
+        <select name="tipoUser" id="tipoUser">
+            <option value="-1" selected>Scegli</option>
+            <option value="base">Utente Base</option>
+            <option value="premium">Utente Premium</option>
+            <option value="platinum">Utente Platinum</option>
+        </select>
+
+        <br>
+
+        <input type="submit" value="Registrati">
+    </form>
+
+    <script src="./js/script03.js"></script>
+</body>
+</html>
