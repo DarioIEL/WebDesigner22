@@ -1,0 +1,24 @@
+{
+    "posts": [
+      { "id": 1, "title": "primo Post", "author": "Dario " }
+    ],
+    "comments": [
+      { "id": 1, "body": "Ciao Dario, bel post", "postId": 1 },
+      {"id": 2, "body": "Ciao Dario, come stai ?",  "postId":2}
+    ],
+    "profile": { "name": "typicode" },
+
+    "studenti":[
+        {"id":1, "nome": "Jona", "corso": "Web Designer", "presenza":true},
+        {"id":2, "nome": "Marco", "corso": "Web Designer", "presenza":true},
+        {"id":3, "nome": "Cinzia", "corso": "Web Designer", "presenza":true},
+        {"id":4, "nome": "Olga", "corso": "Web Designer", "presenza":true},
+        {"id":5, "nome": "Roberto", "corso": "Web Designer", "presenza":true}
+    ],
+
+    "docenti":[
+        {"id": 1, "nome": "Dario", "materia": "Javascript"},
+        {"id": 2, "nome": "Davide", "materia": "HTML & CSS"}
+    ]
+}
+
